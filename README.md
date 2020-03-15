@@ -36,32 +36,46 @@ laravel new .
 ```
 composer install
 ```
+6. Update the DB_PASSWORD property in the .env file. It will be blank to start with, but you should change it to password. So, DB_PASSWORD=password
+You can do this using the following command: 
 
-5. cd back into the laravel-docker-compose directory:
+```
+sudo sed -i "" 's/DB_PASSWORD=/DB_PASSWORD=password/g' .env
+```
+
+7. cd back into the laravel-docker-compose directory:
 
 ```
 cd ../
 ```
 
-7. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the drupal-docker-compose directory)
+8. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the drupal-docker-compose directory)
 
 ```
 127.0.0.1       laravel.local
 ```
 
-6. Run docker-compose:
+9. Run docker-compose:
 
 ```
 docker-compose up -d
 ```
 
-7. Go to the following url in your browser:
+10. Go to the following url in your browser:
 
 ```
 http://laravel.local:8080/
 ```
 
 You should hopefully see your new laravel site.
+
+11. Migrate the default database that comes with laravel. Do this by running the following command in the root folder:
+
+```
+./php-artisan migrate:fresh --seed
+```
+
+You should now be all set up.
 
 
 NB: To stop the site at any time, run the following command:
