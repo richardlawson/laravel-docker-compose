@@ -56,7 +56,7 @@ sed -i "" 's/DB_HOST=127.0.0.1/DB_HOST=mysql/g' .env
 cd ../
 ```
 
-9. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the drupal-docker-compose directory)
+9. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the laravel-docker-compose directory)
 
 ```
 127.0.0.1       laravel.local
