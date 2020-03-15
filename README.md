@@ -42,26 +42,33 @@ You can do this using the following command:
 ```
 sed -i "" 's/DB_PASSWORD=/DB_PASSWORD=password/g' .env
 ```
+7. Update DB_HOST in the .env file. It will be set to 127.0.0.1 to start with, but you should change it to point to the mysql image. So,
+DB_HOST=mysql
+You can do this using the following command: 
 
-7. cd back into the laravel-docker-compose directory:
+```
+sed -i "" 's/DB_HOST=127.0.0.1/DB_HOST=mysql/g' .env
+```
+
+8. cd back into the laravel-docker-compose directory:
 
 ```
 cd ../
 ```
 
-8. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the drupal-docker-compose directory)
+9. Add the following to your /etc/hosts file (note this is your computer hosts file. and is not included in the drupal-docker-compose directory)
 
 ```
 127.0.0.1       laravel.local
 ```
 
-9. Run docker-compose:
+10. Run docker-compose:
 
 ```
 docker-compose up -d
 ```
 
-10. Go to the following url in your browser:
+11. Go to the following url in your browser:
 
 ```
 http://laravel.local:8080/
@@ -69,7 +76,7 @@ http://laravel.local:8080/
 
 You should hopefully see your new laravel site.
 
-11. Migrate the default database that comes with laravel. Do this by running the following command in the root folder:
+12. Migrate the default database that comes with laravel. Do this by running the following command in the root folder:
 
 ```
 ./php-artisan migrate:fresh --seed
@@ -84,7 +91,7 @@ NB: To stop the site at any time, run the following command:
 docker-compose stop
 ```
 
-NB: You can run artisan in the root folder by running the following command:
+NB: You can run artisan in the root folder by running the following command (don't use php artisan):
 
 ```
 ./php-artisan
