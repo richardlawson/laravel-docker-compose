@@ -1,0 +1,4 @@
+#!/bin/bash
+
+args="$@"
+docker-compose exec php bash -c "cd /code && ./vendor/bin/phpunit ${args}"  

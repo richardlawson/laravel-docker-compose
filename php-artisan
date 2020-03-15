@@ -1,0 +1,4 @@
+#!/bin/bash
+
+args="$@"
+docker-compose exec php php /code/artisan $args
