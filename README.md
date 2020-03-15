@@ -8,7 +8,7 @@ Prerequisites:
 
 - composer installed globally (see https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 - docker-compose installed (see https://docs.docker.com/compose/install/)
-- laravel installer (installed globally, see: https://laravel.com/docs/7.x/installation#installing-laravel)
+- laravel installer installed globally (see: https://laravel.com/docs/7.x/installation#installing-laravel)
 
 1. clone this repo:
 
