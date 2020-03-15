@@ -124,7 +124,7 @@ To do so, add a new connection and use the following settings:
 ```
 hostname: 127.0.0.1
 port: 3307
-username: laravel
+username: root
 password: password
 ```
 
