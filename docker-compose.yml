@@ -21,6 +21,6 @@ mysql:
         MYSQL_DATABASE: laravel
         MYSQL_USER: laravel 
         MYSQL_PASSWORD: password 
-        MYSQL_ROOT_PASSWORD: password
+        MYSQL_ROOT_PASSWORD:
     volumes:
         - ./mysqldata:/var/lib/mysql/
