@@ -40,7 +40,7 @@ composer install
 You can do this using the following command: 
 
 ```
-sudo sed -i "" 's/DB_PASSWORD=/DB_PASSWORD=password/g' .env
+sed -i "" 's/DB_PASSWORD=/DB_PASSWORD=password/g' .env
 ```
 
 7. cd back into the laravel-docker-compose directory:
