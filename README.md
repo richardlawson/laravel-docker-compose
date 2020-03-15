@@ -91,7 +91,7 @@ NB: To stop the site at any time, run the following command:
 docker-compose stop
 ```
 
-NB: You can run artisan in the root folder by running the following command (don't use php artisan):
+NB: You can run artisan in the root folder by running the following command (use this instead of the standard php artisan command):
 
 ```
 ./php-artisan
